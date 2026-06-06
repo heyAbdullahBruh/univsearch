@@ -1,16 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniExplorer — University Data Visualization</title>
+    
+    <!-- ── Primary Meta Tags ── -->
+    <title>UniExplorer — Find Top CS/IT Universities in Turkey | Türkiye Bursları Guide</title>
+    <meta name="title" content="UniExplorer — Find Top CS/IT Universities in Turkey | Türkiye Bursları Guide" />
+    <meta name="description" content="Explore 20 top Turkish universities for Computer Science & IT programs. Compare tuition fees, admission requirements, QS rankings, scholarships & Türkiye Bursları eligibility for Bangladeshi HSC students." />
+    <meta name="keywords" content="Turkey universities, computer science Turkey, IT programs Turkey, Türkiye Bursları, Turkish scholarship, study in Turkey, Bangladeshi students Turkey, QS ranking Turkey, METU, ITU, Bilkent, Koç University, undergraduate Turkey" />
+    <meta name="author" content="UniExplorer" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#FF6B9D" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0D1B0F" media="(prefers-color-scheme: dark)" />
+    
+    <!-- ── Canonical URL ── -->
+    <link rel="canonical" href="https://univsearch.vercel.app" />
+    
+    <!-- ── Favicon ── -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- ── Fonts Preconnect ── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <!-- ── Open Graph / Facebook ── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://univsearch.vercel.app" />
+    <meta property="og:title" content="UniExplorer — Find Top CS/IT Universities in Turkey | Türkiye Bursları Guide" />
+    <meta property="og:description" content="Explore 20 top Turkish universities for Computer Science & IT programs. Compare tuition fees, admission requirements, QS rankings, scholarships & Türkiye Bursları eligibility." />
+    <meta property="og:image" content="https://univsearch.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="UniExplorer — University Data Visualization Platform" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:site_name" content="UniExplorer" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@uni_explorer" />
+    <meta name="twitter:creator" content="@uni_explorer" />
+    <meta name="twitter:url" content="https://univsearch.vercel.app" />
+    <meta name="twitter:title" content="UniExplorer — Find Top CS/IT Universities in Turkey | Türkiye Bursları Guide" />
+    <meta name="twitter:description" content="Explore 20 top Turkish universities for Computer Science & IT programs. Compare tuition fees, admission requirements, QS rankings & scholarships." />
+    <meta name="twitter:image" content="https://univsearch.vercel.app/twitter-card.png" />
+    <meta name="twitter:image:alt" content="UniExplorer platform preview showing university cards and filters" />
+    
+    <!-- ── JSON-LD Structured Data ── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "UniExplorer",
+      "url": "https://univsearch.vercel.app",
+      "description": "Interactive platform to explore and compare Computer Science & IT programs at top Turkish universities for international students.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "author": {
+        "@type": "Organization",
+        "name": "UniExplorer",
+        "url": "https://univsearch.vercel.app"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "about": {
+        "@type": "EducationalOrganization",
+        "name": "Turkish Universities for International Students",
+        "description": "Comprehensive guide to CS/IT programs, admission requirements, and scholarships for studying in Turkey"
+      },
+      "browserRequirements": "Requires JavaScript. Supports Chrome, Firefox, Safari, Edge."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Türkiye Bursları scholarship?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Türkiye Bursları is a Turkish government scholarship program offering full tuition, dormitory, monthly stipend (~3,500 TRY), health insurance, return airfare, and 1-year free Turkish language course for international undergraduate students under 21."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Turkish universities are best for Computer Science?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Top Turkish universities for Computer Science include METU (QS #269), Istanbul Technical University (QS #298), Koç University (QS #323), Boğaziçi University (QS #371), and Bilkent University (QS #415). All offer English-medium programs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need YÖS exam to study in Turkey?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many public universities require YÖS (Foreign Student Exam) or SAT scores. However, several private universities like Koç, Bilkent, Sabancı, Medipol, BAU, and Atılım do not require YÖS for international students."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the tuition fees for CS programs in Turkey?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Public university tuition ranges from $500-$3,000/year. Private universities range from $7,000-$38,000/year. However, Türkiye Bursları scholarship covers 100% tuition for eligible students."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- ── Preload Critical Assets ── -->
+    <link rel="preload" as="image" href="/favicon.svg" type="image/svg+xml" />
+    
+    <!-- ── Security Headers ── -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- ── DNS Prefetch ── -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://tbbs.meb.gov.tr" />
+    
+    <!-- ── NoScript Fallback ── -->
+    <noscript>
+      <style>
+        body { 
+          background: #FFF5F7; 
+          color: #1B4332; 
+          font-family: 'JetBrains Mono', monospace;
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+          min-height: 100vh; 
+          margin: 0; 
+          padding: 20px;
+          text-align: center;
+        }
+        .no-js-message {
+          max-width: 500px;
+          padding: 40px;
+          background: white;
+          border-radius: 16px;
+          border: 2px solid #FFD6E0;
+        }
+        .no-js-message h1 { font-family: 'Space Mono', monospace; color: #FF6B9D; }
+        .no-js-message a { color: #4895EF; }
+      </style>
+      <div class="no-js-message">
+        <h1>UniExplorer</h1>
+        <p>This application requires JavaScript to be enabled.</p>
+        <p>Please enable JavaScript in your browser settings to explore top Turkish universities for CS/IT programs.</p>
+        <hr style="border-color: #FFD6E0; margin: 20px 0;" />
+        <p><strong>Quick Links:</strong></p>
+        <p><a href="https://tbbs.meb.gov.tr">Türkiye Bursları Portal</a></p>
+        <p><a href="https://www.metu.edu.tr">METU — Middle East Technical University</a></p>
+        <p><a href="https://www.itu.edu.tr">ITU — Istanbul Technical University</a></p>
+        <p><a href="https://www.ku.edu.tr">Koç University</a></p>
+        <p><a href="https://www.boun.edu.tr">Boğaziçi University</a></p>
+      </div>
+    </noscript>
   </head>
+  
   <body>
-    <div id="root"></div>
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-pinkDeep focus:text-white focus:rounded-lg focus:font-mono">
+      Skip to main content
+    </a>
+    
+    <!-- Main App Root -->
+    <div id="root" role="application" aria-label="UniExplorer Application">
+      <!-- Loading placeholder shown before React hydrates -->
+      <div id="initial-loader" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#FFF5F7;font-family:'JetBrains Mono',monospace;color:#1B4332;">
+        <div style="text-align:center;">
+          <p style="font-family:'Space Mono',monospace;font-size:24px;color:#FF6B9D;">&lt;/&gt; UniExplorer</p>
+          <p style="font-size:14px;color:#52B788;">Loading universities...</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Script -->
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Remove loader when React mounts -->
+    <script>
+      // Hide initial loader when React takes over
+      const observer = new MutationObserver(() => {
+        const loader = document.getElementById('initial-loader');
+        const root = document.getElementById('root');
+        if (root.children.length > 1 && loader) {
+          loader.style.display = 'none';
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.getElementById('root'), { childList: true });
+    </script>
+    
+    <!-- Google Analytics (optional - replace with your ID) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
   </body>
 </html>

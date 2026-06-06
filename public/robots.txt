@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://univsearch.vercel.app/sitemap.xml
+
+Host: https://univsearch.vercel.app
