@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #fff5f7;
+  --bg-card: #ffffff;
+  --bg-nav: rgba(255, 245, 247, 0.85);
+  --text-primary: #1b4332;
+  --text-muted: #52b788;
+  --border: #ffd6e0;
+  --accent: #ff6b9d;
+  --accent2: #4895ef;
+  --tag-bg: #ffb3c6;
+  --tag-text: #1b4332;
+}
+
+.dark {
+  --bg-page: #0d1b0f;
+  --bg-card: #1b4332;
+  --bg-nav: rgba(13, 27, 15, 0.9);
+  --text-primary: #ffb3c6;
+  --text-muted: #52b788;
+  --border: #2d6a4f;
+  --accent: #ff6b9d;
+  --accent2: #4895ef;
+  --tag-bg: #1a2a6c;
+  --tag-text: #ffb3c6;
+}
+
+* {
+  font-family: "JetBrains Mono", monospace;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Animation classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-dot-grid {
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
